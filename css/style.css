@@ -12,7 +12,7 @@ header {
 
 .contenedor {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
@@ -24,25 +24,37 @@ header {
 }
 .caja img {
     max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
-
 .caja p {
     margin: 0;
     font-size: 1rem;
     color: #333;
 }
+
+@media (max-width: 1024px) {
+    .contenedor {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .caja {
+        background-color: #D7BDE2;
+    }
+}
+
 @media (max-width: 800px) {
     .contenedor {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
     .caja {
         background-color: #A3E4D7;
     }
 }
+
 @media (max-width: 600px) {
+    .contenedor {
+        grid-template-columns: 1fr;
+    }
     .caja {
         background-color: #F5B7B1;
     }
